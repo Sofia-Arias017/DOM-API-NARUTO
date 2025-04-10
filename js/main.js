@@ -4,58 +4,60 @@ export default url;
 
 // Función para obtener todos los personajes
 let getALL = async () => {
+    const url = 'https://dattebayo-api.onrender.com/characters';
     const config = { method: "GET" };
     const response = await fetch(url, config);
     return response.json();
 };
 
-// Obtener la información de la API
-let response = await fetch("https://dattebayo-api.onrender.com/characters");
-let data = await response.json();
+// Obtener la información desde la API
+let info = await fetch("https://dattebayo-api.onrender.com/characters");
+let data = await info.json();
 
-// Asignar los personajes a variables individuales
-const [char1, char2, char3, char4] = data.characters;
+// Desestructurar los personajes
+const [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t] = data.characters;
 
-// Personaje 1
-let cardTitle1 = document.getElementById("card-title-1");
-let cardImage1 = document.getElementById("cardimage1");
-let cardClan1 = document.getElementById("card-head-1");
-let cardSkill1 = document.getElementById("card-description-1");
+// --- Primer personaje ---
+let titulo1 = document.getElementById("cardtitle1");
+let imagen1 = document.getElementById("cardimage1");
+let clan1 = document.getElementById("cardhead1");
+let habilidad1 = document.getElementById("carddescription1");
 
-cardImage1.src = char1.images[0];
-cardTitle1.innerHTML = char1.name;
-cardClan1.innerHTML = `Origen: Clan ${char1.personal.clan} | Aldea: ${char1.personal.affiliation[0]}`;
-cardSkill1.innerHTML = `Técnica especial: ${char1.jutsu[52]}`;
+// Asignar información personalizada
+imagen1.src = e.images[0];
+titulo1.innerHTML = `Conoce a ${e.name}`;
+clan1.innerHTML = `Aldea: ${e.personal.affiliation[0]} | Clan: Sin clan`;
+habilidad1.innerHTML = `Técnica destacada: ${e.jutsu[5]}`;
 
-// Personaje 2
-let cardTitle2 = document.getElementById("card-title-2");
-let cardImage2 = document.getElementById("cardimage2");
-let cardClan2 = document.getElementById("card-head-2");
-let cardSkill2 = document.getElementById("card-description-2");
+// --- Segundo personaje ---
+let titulo2 = document.getElementById("cardtitle2");
+let imagen2 = document.getElementById("cardimage2");
+let clan2 = document.getElementById("cardhead2");
+let habilidad2 = document.getElementById("carddescription2");
 
-cardImage2.src = char2.images[0];
-cardTitle2.innerHTML = char2.name;
-cardClan2.innerHTML = `Origen: Clan ${char2.personal.clan} | Aldea: ${char2.personal.affiliation[0]}`;
-cardSkill2.innerHTML = `Técnica especial: ${char2.jutsu[1]}`;
+imagen2.src = f.images[0];
+titulo2.innerHTML = `Nombre: ${f.name}`;
+clan2.innerHTML = `Clan: ${f.personal.clan} | Aldea: ${f.personal.affiliation[0]}`;
+habilidad2.innerHTML = `Jutsu único: ${f.jutsu[1]}`;
 
-// Personaje 3
-let cardTitle3 = document.getElementById("card-title-3");
-let cardImage3 = document.getElementById("cardimage3");
-let cardClan3 = document.getElementById("card-head-3");
-let cardSkill3 = document.getElementById("card-description-3");
+// --- Tercer personaje ---
+let titulo3 = document.getElementById("cardtitle3");
+let imagen3 = document.getElementById("cardimage3");
+let clan3 = document.getElementById("cardhead3");
+let habilidad3 = document.getElementById("carddescription3");
 
-cardImage3.src = char3.images[0];
-cardTitle3.innerHTML = char3.name;
-cardClan3.innerHTML = `Origen: Clan ${char3.personal.clan} | Aldea: ${char3.personal.affiliation[0]}`;
-cardSkill3.innerHTML = `Técnica especial: ${char3.jutsu[1]}`;
+imagen3.src = g.images[0];
+titulo3.innerHTML = `Personaje: ${g.name}`;
+clan3.innerHTML = `Clan: ${g.personal.clan} | Aldea: ${g.personal.affiliation[0]}`;
+habilidad3.innerHTML = `Jutsu principal: ${g.jutsu[1]}`;
 
-// Personaje 4
-let cardTitle4 = document.getElementById("card-title-4");
-let cardImage4 = document.getElementById("cardimage4");
-let cardClan4 = document.getElementById("card-head-4");
-let cardSkill4 = document.getElementById("card-description-4");
+// --- Cuarto personaje ---
+let titulo4 = document.getElementById("cardtitle4");
+let imagen4 = document.getElementById("cardimage4");
+let clan4 = document.getElementById("cardhead4");
+let habilidad4 = document.getElementById("carddescription4");
 
-cardImage4.src = char4.images[0];
-cardTitle4.innerHTML = char4.name;
-cardClan4.innerHTML = `Origen: Clan ${char4.personal.clan} | Aldea: ${char4.personal.affiliation[0]}`;
-cardSkill4.innerHTML = `Técnica especial: ${char4.jutsu[1]}`;
+imagen4.src = h.images[0];
+titulo4.innerHTML = `Ficha de ${h.name}`;
+clan4.innerHTML = `Clan: ${h.personal.clan} | Aldea: ${h.personal.affiliation[0]}`;
+habilidad4.innerHTML = `Especialidad: ${h.jutsu[1]}`;
