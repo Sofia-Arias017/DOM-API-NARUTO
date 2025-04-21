@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -41,17 +41,62 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.card-image {
+.cardimage1 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.cardimage2 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.cardimage3{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.cardimage4{
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card-content {
+
+.card-content1 {
+    padding: 1rem;
+}
+.card-content2{
+    padding: 1rem;
+}
+.card-content3 {
+    padding: 1rem;
+}
+.card-content4 {
     padding: 1rem;
 }
 
-.card-title {
+
+.cardtitle1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.cardtitle2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.cardtitle3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.cardtitle4 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -103,13 +148,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
-.cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 }
 
 @media (max-width: 480px) {
-.cards-container {
-    grid-template-columns: 1fr;
-}
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
 }
